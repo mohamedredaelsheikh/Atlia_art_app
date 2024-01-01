@@ -1,5 +1,5 @@
 import 'package:atlia_art/core/utils/constants.dart';
-import 'package:atlia_art/features/splash/presentation/widgets/custom_button.dart';
+import 'package:atlia_art/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
