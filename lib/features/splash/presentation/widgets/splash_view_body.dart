@@ -1,6 +1,7 @@
 import 'package:atlia_art/core/utils/constants.dart';
 import 'package:atlia_art/features/splash/presentation/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatelessWidget {
   const SplashViewBody({super.key});
@@ -9,15 +10,14 @@ class SplashViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        SizedBox(
-            height: MediaQuery.sizeOf(context).height,
-            width: double.infinity,
-            child: Image.asset("assets/images/splash.png")),
+        Center(child: Image.asset("assets/images/splash.png")),
         Positioned(
           bottom: MediaQuery.of(context).size.height * 0.05,
           left: MediaQuery.of(context).size.width * 0.2,
           child: CustomButton(
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).push(kWelcomeView);
+              },
               height: 45,
               width: 240,
               backgroundcolor: kSacandaryColor,
