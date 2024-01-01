@@ -4,6 +4,7 @@ import 'package:atlia_art/core/widgets/custom_button.dart';
 import 'package:atlia_art/features/Auth/presentation/widgets/continue_with_account.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
 class WelcomeViewBody extends StatelessWidget {
   const WelcomeViewBody({super.key});
@@ -86,7 +87,9 @@ class WelcomeViewBody extends StatelessWidget {
               height: 20,
             ),
             CustomButton(
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).push(kRegisterView);
+              },
               backgroundcolor: kThairdColor,
               textcolor: const Color(0xff7638F9),
               text: "New Acount",

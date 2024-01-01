@@ -5,6 +5,7 @@ const kSacandaryColor = Color(0xffFFC727); //E8C12C
 const kThairdColor = Color(0xffEAE6E5); //  D9D9D9
 
 const kWelcomeView = '/welcomeview';
+const kRegisterView = '/RegisterView';
 
 const kMyImage = "assets/images/my_image.jpg";
 
