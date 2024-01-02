@@ -113,7 +113,7 @@ class LoginViewBody extends StatelessWidget {
             children: [
               CustomButton(
                 onPressed: () {
-                  GoRouter.of(context).pop(kForgetPasswordView);
+                  GoRouter.of(context).push(kForgetPasswordView);
                 },
                 backgroundcolor: kThairdColor,
                 text: "Forget Password?",
