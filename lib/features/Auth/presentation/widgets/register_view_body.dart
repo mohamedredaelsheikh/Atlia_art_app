@@ -1,6 +1,7 @@
 import 'package:atlia_art/core/utils/constants.dart';
 import 'package:atlia_art/core/widgets/custom_button.dart';
 import 'package:atlia_art/features/Auth/presentation/widgets/custom_text_form_field.dart';
+import 'package:atlia_art/features/Auth/presentation/widgets/sign_in_with_icons.dart';
 import 'package:flutter/material.dart';
 
 class RegisterViewBody extends StatelessWidget {
@@ -208,30 +209,7 @@ class RegisterViewBody extends StatelessWidget {
                 ],
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Opacity(
-                  opacity: .75,
-                  child: Text(
-                    "I have an account.",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w800,
-                      color: kPrimaryColor,
-                    ),
-                  ),
-                ),
-                CustomButton(
-                  onPressed: () {},
-                  fontsize: 18,
-                  backgroundcolor: kThairdColor,
-                  textcolor: kSacandaryColor,
-                  text: "Sign In",
-                  height: 50,
-                ),
-              ],
-            )
+            const SignInWithIcons()
           ],
         ),
       ),
