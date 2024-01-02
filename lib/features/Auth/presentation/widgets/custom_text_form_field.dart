@@ -6,18 +6,23 @@ class CustomTextFormFiled extends StatelessWidget {
   final FormFieldValidator<String> validate;
   final void Function(String)? onChanged;
   final TextInputType? type;
-  final String hintText;
+  final String? hintText;
   final IconData? prefix;
   final bool? isPassword;
+  final BorderRadiusGeometry? borderRadius;
+  final double outlineInputBorderRadius;
+
   const CustomTextFormFiled({
     super.key,
     required this.controller,
     required this.validate,
     this.type,
-    required this.hintText,
+    this.hintText,
     this.prefix,
     this.isPassword = false,
     this.onChanged,
+    this.borderRadius,
+    this.outlineInputBorderRadius = 4,
   });
 
   @override
@@ -26,7 +31,7 @@ class CustomTextFormFiled extends StatelessWidget {
       height: 60,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(24),
+        borderRadius: borderRadius ?? BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
               color: Colors.grey.withOpacity(0.5),
@@ -51,23 +56,29 @@ class CustomTextFormFiled extends StatelessWidget {
             color: kPrimaryColor,
           ),
           prefixIcon: Icon(prefix),
-          border: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(24)),
+          border: outlineInputBorder(
+            color: Colors.white,
+            raduis: outlineInputBorderRadius,
           ),
-          enabledBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(24)),
-            borderSide: BorderSide(
-              color: Colors.white,
-            ),
+          enabledBorder: outlineInputBorder(
+            color: Colors.white,
+            raduis: outlineInputBorderRadius,
           ),
-          focusColor: Colors.white,
-          focusedBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(24)),
-            borderSide: BorderSide(
-              color: kPrimaryColor,
-            ),
+          focusedBorder: outlineInputBorder(
+            color: kPrimaryColor,
+            raduis: outlineInputBorderRadius,
           ),
         ),
+      ),
+    );
+  }
+
+  OutlineInputBorder outlineInputBorder(
+      {required color, required double raduis}) {
+    return OutlineInputBorder(
+      borderRadius: BorderRadius.all(Radius.circular(raduis)),
+      borderSide: BorderSide(
+        color: color!,
       ),
     );
   }

@@ -74,6 +74,7 @@ class RegisterViewBody extends StatelessWidget {
                 }
                 return null;
               },
+              outlineInputBorderRadius: 24,
               type: TextInputType.name,
             ),
             const SizedBox(
@@ -107,6 +108,7 @@ class RegisterViewBody extends StatelessWidget {
                 }
                 return null;
               },
+              outlineInputBorderRadius: 24,
             ),
             const SizedBox(
               height: 15,
@@ -139,6 +141,7 @@ class RegisterViewBody extends StatelessWidget {
                 }
                 return null;
               },
+              outlineInputBorderRadius: 24,
             ),
             const SizedBox(
               height: 15,
@@ -172,6 +175,7 @@ class RegisterViewBody extends StatelessWidget {
                 }
                 return null;
               },
+              outlineInputBorderRadius: 24,
             ),
             const SizedBox(
               height: 25,

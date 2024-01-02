@@ -8,9 +8,11 @@ const kWelcomeView = '/welcomeview';
 const kRegisterView = '/RegisterView';
 const kLoginView = '/LoginView';
 const kForgetPasswordView = '/ForgetPasswordView';
-const kMyImage = "assets/images/my_image.jpg";
+const kResetPassword = '/ResetPassword';
 
+const kMyImage = "assets/images/my_image.jpg";
 const kGoogleLogo = "assets/images/google_icon.png";
 const kAppleLogo = "assets/images/Apple-Iphone-Logo.png";
 const kHelloImage = "assets/images/Hello-cuate.svg";
 const kLockImage = 'assets/images/lock.png';
+const kOtpImage = 'assets/images/otp_image.png';

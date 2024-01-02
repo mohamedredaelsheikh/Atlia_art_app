@@ -2,6 +2,7 @@ import 'package:atlia_art/core/utils/constants.dart';
 import 'package:atlia_art/features/Auth/presentation/views/forget_password_view.dart';
 import 'package:atlia_art/features/Auth/presentation/views/login_view.dart';
 import 'package:atlia_art/features/Auth/presentation/views/register_view.dart';
+import 'package:atlia_art/features/Auth/presentation/views/reset_password_view.dart';
 import 'package:atlia_art/features/Auth/presentation/views/welcome_view.dart';
 import 'package:atlia_art/features/splash/presentation/views/spalsh_view.dart';
 import 'package:go_router/go_router.dart';
@@ -28,6 +29,10 @@ abstract class AppRouter {
       GoRoute(
         path: kForgetPasswordView,
         builder: (context, state) => const ForgetPasswordView(),
+      ),
+      GoRoute(
+        path: kResetPassword,
+        builder: (context, state) => const ResetPassword(),
       ),
     ],
   );
