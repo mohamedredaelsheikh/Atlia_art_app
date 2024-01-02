@@ -30,7 +30,14 @@ class _SplashViewBodyState extends State<SplashViewBody>
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Center(child: Image.asset("assets/images/splash.png")),
+        SizedBox(
+          height: double.infinity,
+          width: double.infinity,
+          child: Image.asset(
+            "assets/images/splash.png",
+            fit: BoxFit.cover,
+          ),
+        ),
         Positioned(
           bottom: MediaQuery.of(context).size.height * 0.05,
           left: MediaQuery.of(context).size.width * 0.2,
