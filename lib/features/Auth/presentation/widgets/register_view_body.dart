@@ -3,6 +3,7 @@ import 'package:atlia_art/core/widgets/custom_button.dart';
 import 'package:atlia_art/features/Auth/presentation/widgets/custom_text_form_field.dart';
 import 'package:atlia_art/features/Auth/presentation/widgets/sign_in_with_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class RegisterViewBody extends StatelessWidget {
   const RegisterViewBody({super.key});
@@ -187,29 +188,33 @@ class RegisterViewBody extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            Container(
-              color: kThairdColor,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  GestureDetector(
-                    onTap: () {},
-                    child: Image.asset(
-                      kAppleLogo,
-                      height: 35,
+            const CustomSignInWithIcons(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Opacity(
+                  opacity: .75,
+                  child: Text(
+                    "I have an account.",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w800,
+                      color: kPrimaryColor,
                     ),
                   ),
-                  GestureDetector(
-                    onTap: () {},
-                    child: Image.asset(
-                      kGoogleLogo,
-                      height: 35,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SignInWithIcons()
+                ),
+                CustomButton(
+                  onPressed: () {
+                    GoRouter.of(context).push(kLoginView);
+                  },
+                  fontsize: 18,
+                  backgroundcolor: kThairdColor,
+                  textcolor: kSacandaryColor,
+                  text: "Sign In",
+                  height: 50,
+                ),
+              ],
+            )
           ],
         ),
       ),

@@ -5,18 +5,20 @@ class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
     required this.backgroundcolor,
-    required this.textcolor,
+    this.textcolor,
     this.borderRadius,
     required this.text,
     this.fontsize,
     this.onPressed,
     this.width,
     required this.height,
+    this.style,
   });
+  final TextStyle? style;
   final double? width;
   final double height;
   final Color backgroundcolor;
-  final Color textcolor;
+  final Color? textcolor;
   final BorderRadius? borderRadius;
   final String text;
   final double? fontsize;
@@ -38,11 +40,12 @@ class CustomButton extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: Styles.textStyle25.copyWith(
-            color: textcolor,
-            fontWeight: FontWeight.w900,
-            fontSize: fontsize,
-          ),
+          style: style ??
+              Styles.textStyle25.copyWith(
+                color: textcolor,
+                fontWeight: FontWeight.w900,
+                fontSize: fontsize,
+              ),
         ),
       ),
     );

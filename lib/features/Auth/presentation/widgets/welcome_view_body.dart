@@ -47,7 +47,9 @@ class WelcomeViewBody extends StatelessWidget {
               height: 30,
             ),
             CustomButton(
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).push(kLoginView);
+              },
               backgroundcolor: kPrimaryColor,
               textcolor: kSacandaryColor,
               borderRadius: BorderRadius.circular(16),

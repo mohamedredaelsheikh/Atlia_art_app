@@ -1,4 +1,5 @@
 import 'package:atlia_art/core/utils/constants.dart';
+import 'package:atlia_art/features/Auth/presentation/views/login_view.dart';
 import 'package:atlia_art/features/Auth/presentation/views/register_view.dart';
 import 'package:atlia_art/features/Auth/presentation/views/welcome_view.dart';
 import 'package:atlia_art/features/splash/presentation/views/spalsh_view.dart';
@@ -18,6 +19,10 @@ abstract class AppRouter {
       GoRoute(
         path: kRegisterView,
         builder: (context, state) => const RegisterView(),
+      ),
+      GoRoute(
+        path: kLoginView,
+        builder: (context, state) => const LoginView(),
       ),
     ],
   );

@@ -6,6 +6,7 @@ const kThairdColor = Color(0xffEAE6E5); //  D9D9D9
 
 const kWelcomeView = '/welcomeview';
 const kRegisterView = '/RegisterView';
+const kLoginView = '/LoginView';
 
 const kMyImage = "assets/images/my_image.jpg";
 
