@@ -20,7 +20,7 @@ class WelcomeViewBody extends StatelessWidget {
             SizedBox(
               height: 300,
               width: 300,
-              child: SvgPicture.asset("assets/images/Hello-cuate.svg"),
+              child: SvgPicture.asset(kHelloImage),
             ),
             Text(
               "Welcome.",
@@ -74,6 +74,7 @@ class WelcomeViewBody extends StatelessWidget {
               ontap: () {},
               image: kGoogleLogo,
               text: "Countine with Google",
+              color: Colors.white,
             ),
             const SizedBox(
               height: 10,
@@ -82,6 +83,7 @@ class WelcomeViewBody extends StatelessWidget {
               ontap: () {},
               image: kAppleLogo,
               text: "Countine with Apple",
+              color: Colors.white,
             ),
             const SizedBox(
               height: 20,
