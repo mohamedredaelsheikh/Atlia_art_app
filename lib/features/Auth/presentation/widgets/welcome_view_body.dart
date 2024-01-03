@@ -33,14 +33,14 @@ class WelcomeViewBody extends StatelessWidget {
                 fontWeight: FontWeight.w900,
               ),
             ),
-            Opacity(
+            const Opacity(
               opacity: .7,
               child: Text(
                 "I hope you enjoy.",
-                style: Styles.textStyle16.copyWith(
-                  color: kPrimaryColor,
-                  fontWeight: FontWeight.w900,
-                ),
+                // style: Styles.textStyle16.copyWith(
+                //   color: kPrimaryColor,
+                //   fontWeight: FontWeight.w900,
+                // ),
               ),
             ),
             const SizedBox(

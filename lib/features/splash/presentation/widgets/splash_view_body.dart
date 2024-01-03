@@ -1,3 +1,4 @@
+import 'package:atlia_art/core/utils/constants.dart';
 import 'package:atlia_art/features/splash/presentation/widgets/sliding_button_animation.dart';
 import 'package:flutter/material.dart';
 
@@ -31,10 +32,9 @@ class _SplashViewBodyState extends State<SplashViewBody>
     return Stack(
       children: [
         SizedBox(
-          height: double.infinity,
           width: double.infinity,
           child: Image.asset(
-            "assets/images/splash.png",
+            kSplashImage,
             fit: BoxFit.cover,
           ),
         ),
