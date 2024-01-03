@@ -61,7 +61,9 @@ class WelcomeViewBody extends StatelessWidget {
               height: 10,
             ),
             CustomButton(
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).push(kRegisterView);
+              },
               backgroundcolor: kPrimaryColor,
               textcolor: kSacandaryColor,
               borderRadius: BorderRadius.circular(16),

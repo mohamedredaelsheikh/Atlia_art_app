@@ -9,6 +9,7 @@ const kRegisterView = '/RegisterView';
 const kLoginView = '/LoginView';
 const kForgetPasswordView = '/ForgetPasswordView';
 const kResetPassword = '/ResetPassword';
+const kHomeView = '/HomeView';
 
 const kMyImage = "assets/images/my_image.jpg";
 const kGoogleLogo = "assets/images/google_icon.png";
