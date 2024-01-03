@@ -1,4 +1,5 @@
 import 'package:atlia_art/core/utils/constants.dart';
+import 'package:atlia_art/core/utils/styles.dart';
 import 'package:atlia_art/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -22,10 +23,13 @@ class SlidingAnimationButton extends StatelessWidget {
               onPressed: () {
                 GoRouter.of(context).push(kWelcomeView);
               },
-              height: 45,
-              width: 240,
+              height: 51,
+              width: 281,
+              borderRadius: BorderRadius.circular(15),
               backgroundcolor: kSacandaryColor,
-              textcolor: kPrimaryColor,
+              style: Styles.textStyle20.copyWith(
+                color: kPrimaryColor,
+              ),
               text: "Get Started"),
         );
       },

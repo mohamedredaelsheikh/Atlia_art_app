@@ -25,54 +25,57 @@ class WelcomeViewBody extends StatelessWidget {
             Text(
               "Welcome.",
               style: Styles.textStyle25.copyWith(
-                letterSpacing: 3,
+                letterSpacing: 2.5,
                 foreground: Paint()
                   ..style = PaintingStyle.stroke
-                  ..strokeWidth = 2
+                  ..strokeWidth = 2.5
                   ..color = kPrimaryColor,
-                fontWeight: FontWeight.w900,
-              ),
-            ),
-            const Opacity(
-              opacity: .7,
-              child: Text(
-                "I hope you enjoy.",
-                // style: Styles.textStyle16.copyWith(
-                //   color: kPrimaryColor,
-                //   fontWeight: FontWeight.w900,
-                // ),
+                fontWeight: FontWeight.w800,
+                height: 0.04,
               ),
             ),
             const SizedBox(
-              height: 30,
+              height: 25,
+            ),
+            Text(
+              "I hope you enjoy.",
+              style: Styles.textStyle15.copyWith(
+                color: kPrimaryColor,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            const SizedBox(
+              height: 35,
             ),
             CustomButton(
               onPressed: () {
                 GoRouter.of(context).push(kLoginView);
               },
               backgroundcolor: kPrimaryColor,
-              textcolor: kSacandaryColor,
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(15),
               text: "Log In",
-              fontsize: 20,
-              height: 50,
+              style: Styles.textStyle18.copyWith(
+                color: kSacandaryColor,
+              ),
+              height: 43,
             ),
             const SizedBox(
-              height: 10,
+              height: 15,
             ),
             CustomButton(
               onPressed: () {
                 GoRouter.of(context).push(kRegisterView);
               },
               backgroundcolor: kPrimaryColor,
-              textcolor: kSacandaryColor,
               borderRadius: BorderRadius.circular(16),
               text: "Sign Up",
-              fontsize: 20,
-              height: 50,
+              style: Styles.textStyle18.copyWith(
+                color: kSacandaryColor,
+              ),
+              height: 43,
             ),
             const SizedBox(
-              height: 40,
+              height: 70,
             ),
             ContinueWithAcount(
               ontap: () {},
@@ -92,16 +95,16 @@ class WelcomeViewBody extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            CustomButton(
-              onPressed: () {
-                GoRouter.of(context).push(kRegisterView);
-              },
-              backgroundcolor: kThairdColor,
-              textcolor: const Color(0xff7638F9),
-              text: "New Acount",
-              fontsize: 18,
-              height: 50,
+            Text(
+              'New Account',
+              textAlign: TextAlign.center,
+              style: Styles.textStyle15.copyWith(
+                color: const Color(0xFF5500FF),
+              ),
             ),
+            const SizedBox(
+              height: 37,
+            )
           ],
         ),
       ),

@@ -1,4 +1,4 @@
-import 'package:atlia_art/core/utils/constants.dart';
+import 'package:atlia_art/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class ContinueWithAcount extends StatelessWidget {
@@ -18,7 +18,7 @@ class ContinueWithAcount extends StatelessWidget {
     return GestureDetector(
       onTap: ontap,
       child: Container(
-        height: 50,
+        height: 43,
         padding: const EdgeInsets.symmetric(horizontal: 16),
         decoration: BoxDecoration(
           color: color,
@@ -34,18 +34,12 @@ class ContinueWithAcount extends StatelessWidget {
             const SizedBox(
               width: 10,
             ),
-            Text(
-              text ?? '',
-              style: TextStyle(
-                fontSize: 16,
-                // color: kPrimaryColor,
-                fontWeight: FontWeight.w900,
-                foreground: Paint()
-                  ..style = PaintingStyle.stroke
-                  ..strokeWidth = 1
-                  ..color = kPrimaryColor,
-              ),
-            ),
+            Text(text ?? '',
+                style: Styles.textStyle12.copyWith(
+                  color: Colors.black,
+                  height: 0.17,
+                  letterSpacing: 0.60,
+                )),
           ],
         ),
       ),

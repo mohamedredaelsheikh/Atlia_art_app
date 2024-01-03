@@ -1,4 +1,5 @@
 import 'package:atlia_art/core/utils/constants.dart';
+import 'package:atlia_art/core/utils/styles.dart';
 import 'package:atlia_art/core/widgets/custom_button.dart';
 import 'package:atlia_art/features/Auth/presentation/widgets/custom_text_form_field.dart';
 import 'package:atlia_art/features/Auth/presentation/widgets/sign_in_with_icons.dart';
@@ -30,52 +31,29 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
             children: [
               Text(
                 "Create Account",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: 2,
-                  foreground: Paint()
-                    ..style = PaintingStyle.stroke
-                    ..strokeWidth = 1.5
-                    ..color = kPrimaryColor,
+                style: Styles.textStyle25.copyWith(
+                  color: kPrimaryColor,
                 ),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(
-                height: 5,
+                height: 9,
               ),
-              const Opacity(
-                opacity: .80,
-                child: Text(
-                  "Please Enter this data",
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w800,
-                    color: kPrimaryColor,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
+              const Text(
+                "Please Enter this data",
+                style: Styles.textStyle15,
+                textAlign: TextAlign.center,
               ),
               const SizedBox(
-                height: 30,
+                height: 60,
               ),
-              Opacity(
-                opacity: .75,
-                child: Text(
-                  "Name",
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w800,
-                      foreground: Paint()
-                        ..style = PaintingStyle.stroke
-                        ..strokeWidth = 1.5
-                        ..color = kPrimaryColor,
-                      letterSpacing: 1.5),
-                  textAlign: TextAlign.start,
-                ),
+              Text(
+                "Name",
+                style: Styles.textStyle18.copyWith(color: kPrimaryColor),
+                textAlign: TextAlign.start,
               ),
               const SizedBox(
-                height: 10,
+                height: 25,
               ),
               CustomTextFormFiled(
                 hintText: "Enter your user name.",
@@ -91,25 +69,15 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
                 type: TextInputType.name,
               ),
               const SizedBox(
-                height: 15,
+                height: 30,
               ),
-              Opacity(
-                opacity: .75,
-                child: Text(
-                  "Phone",
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w800,
-                      foreground: Paint()
-                        ..style = PaintingStyle.stroke
-                        ..strokeWidth = 1.5
-                        ..color = kPrimaryColor,
-                      letterSpacing: 1.5),
-                  textAlign: TextAlign.start,
-                ),
+              Text(
+                "Phone",
+                style: Styles.textStyle18.copyWith(color: kPrimaryColor),
+                textAlign: TextAlign.start,
               ),
               const SizedBox(
-                height: 10,
+                height: 25,
               ),
               CustomTextFormFiled(
                 hintText: "Enter your phone.",
@@ -125,25 +93,17 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
                 outlineInputBorderRadius: 24,
               ),
               const SizedBox(
-                height: 15,
+                height: 30,
               ),
-              Opacity(
-                opacity: .75,
-                child: Text(
-                  "E-mail",
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w800,
-                      foreground: Paint()
-                        ..style = PaintingStyle.stroke
-                        ..strokeWidth = 1.5
-                        ..color = kPrimaryColor,
-                      letterSpacing: 1.5),
-                  textAlign: TextAlign.start,
+              Text(
+                "E-mail",
+                style: Styles.textStyle18.copyWith(
+                  color: kPrimaryColor,
                 ),
+                textAlign: TextAlign.start,
               ),
               const SizedBox(
-                height: 10,
+                height: 25,
               ),
               CustomTextFormFiled(
                 hintText: "Enter your E-mail.",
@@ -159,25 +119,17 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
                 outlineInputBorderRadius: 24,
               ),
               const SizedBox(
-                height: 15,
+                height: 30,
               ),
-              Opacity(
-                opacity: .75,
-                child: Text(
-                  "Passward",
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w800,
-                      foreground: Paint()
-                        ..style = PaintingStyle.stroke
-                        ..strokeWidth = 1.5
-                        ..color = kPrimaryColor,
-                      letterSpacing: 1.5),
-                  textAlign: TextAlign.start,
+              Text(
+                "Passward",
+                style: Styles.textStyle18.copyWith(
+                  color: kPrimaryColor,
                 ),
+                textAlign: TextAlign.start,
               ),
               const SizedBox(
-                height: 10,
+                height: 25,
               ),
               CustomTextFormFiled(
                 hintText: "Enter your passward.",
@@ -194,7 +146,7 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
                 outlineInputBorderRadius: 24,
               ),
               const SizedBox(
-                height: 25,
+                height: 35,
               ),
               CustomButton(
                 onPressed: () {
@@ -202,43 +154,43 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
                     GoRouter.of(context).push(kHomeView);
                   }
                 },
+                style: Styles.textStyle18.copyWith(
+                  color: kSacandaryColor,
+                ),
                 backgroundcolor: kPrimaryColor,
-                textcolor: kSacandaryColor,
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(15),
                 text: "Sign Up",
-                fontsize: 20,
-                height: 50,
+                height: 43,
               ),
               const SizedBox(
-                height: 10,
+                height: 45,
               ),
               const CustomSignInWithIcons(),
+              const SizedBox(
+                height: 25,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Opacity(
-                    opacity: .75,
-                    child: Text(
-                      "I have an account.",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w800,
-                        color: kPrimaryColor,
-                      ),
+                  Text(
+                    "I have an account.",
+                    style: Styles.textStyle15.copyWith(
+                      color: kPrimaryColor,
                     ),
                   ),
                   CustomButton(
                     onPressed: () {
                       GoRouter.of(context).push(kLoginView);
                     },
-                    fontsize: 18,
                     backgroundcolor: kThairdColor,
-                    textcolor: kSacandaryColor,
+                    style: Styles.textStyle15.copyWith(
+                      color: kSacandaryColor,
+                    ),
                     text: "Sign In",
-                    height: 50,
+                    height: 43,
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),

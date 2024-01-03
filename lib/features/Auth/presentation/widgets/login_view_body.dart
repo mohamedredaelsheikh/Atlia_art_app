@@ -1,4 +1,5 @@
 import 'package:atlia_art/core/utils/constants.dart';
+import 'package:atlia_art/core/utils/styles.dart';
 import 'package:atlia_art/core/widgets/custom_button.dart';
 import 'package:atlia_art/features/Auth/presentation/widgets/custom_text_form_field.dart';
 import 'package:atlia_art/features/Auth/presentation/widgets/sign_in_with_icons.dart';
@@ -18,49 +19,35 @@ class LoginViewBody extends StatelessWidget {
           children: [
             Text(
               "Log In",
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.w900,
-                letterSpacing: 2,
-                foreground: Paint()
-                  ..style = PaintingStyle.stroke
-                  ..strokeWidth = 1.5
-                  ..color = kPrimaryColor,
+              style: Styles.textStyle30.copyWith(
+                color: kPrimaryColor,
+                height: 0.03,
+                letterSpacing: 1.50,
               ),
               textAlign: TextAlign.center,
             ),
-            const Opacity(
-              opacity: .80,
-              child: Text(
-                "Please Enter your email",
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w800,
-                  color: kPrimaryColor,
-                ),
-                textAlign: TextAlign.center,
+            const SizedBox(
+              height: 30,
+            ),
+            Text(
+              "Please Enter your email.",
+              style: Styles.textStyle15.copyWith(
+                color: kPrimaryColor,
               ),
+              textAlign: TextAlign.center,
             ),
             const SizedBox(
-              height: 15,
+              height: 90,
             ),
-            Opacity(
-              opacity: .75,
-              child: Text(
-                "E-mail",
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w800,
-                    foreground: Paint()
-                      ..style = PaintingStyle.stroke
-                      ..strokeWidth = 1.5
-                      ..color = kPrimaryColor,
-                    letterSpacing: 1.5),
-                textAlign: TextAlign.start,
+            Text(
+              "E-mail",
+              style: Styles.textStyle18.copyWith(
+                color: kPrimaryColor,
               ),
+              textAlign: TextAlign.start,
             ),
             const SizedBox(
-              height: 10,
+              height: 25,
             ),
             CustomTextFormFiled(
               hintText: "Enter your E-mail.",
@@ -75,25 +62,17 @@ class LoginViewBody extends StatelessWidget {
               outlineInputBorderRadius: 24,
             ),
             const SizedBox(
-              height: 15,
+              height: 30,
             ),
-            Opacity(
-              opacity: .75,
-              child: Text(
-                "Passward",
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w800,
-                    foreground: Paint()
-                      ..style = PaintingStyle.stroke
-                      ..strokeWidth = 1.5
-                      ..color = kPrimaryColor,
-                    letterSpacing: 1.5),
-                textAlign: TextAlign.start,
+            Text(
+              "Passward",
+              style: Styles.textStyle18.copyWith(
+                color: kPrimaryColor,
               ),
+              textAlign: TextAlign.start,
             ),
             const SizedBox(
-              height: 10,
+              height: 25,
             ),
             CustomTextFormFiled(
               hintText: "Enter your passward.",
@@ -120,29 +99,29 @@ class LoginViewBody extends StatelessWidget {
                   },
                   backgroundcolor: kThairdColor,
                   text: "Forget Password?",
-                  style: const TextStyle(
-                    color: Color(0xff7638F9),
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
+                  style: Styles.textStyle15.copyWith(
+                    color: const Color(0xFF5500FF),
+                    fontWeight: FontWeight.w300,
                     decoration: TextDecoration.underline,
                   ),
-                  height: 50,
+                  height: 43,
                 ),
               ],
             ),
             const SizedBox(
-              height: 10,
+              height: 21,
             ),
             CustomButton(
               onPressed: () {
                 GoRouter.of(context).push(kHomeView);
               },
               backgroundcolor: kPrimaryColor,
-              textcolor: kSacandaryColor,
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(15),
+              style: Styles.textStyle18.copyWith(
+                color: kSacandaryColor,
+              ),
               text: "Log In",
-              fontsize: 20,
-              height: 50,
+              height: 43,
             ),
             const SizedBox(
               height: 40,

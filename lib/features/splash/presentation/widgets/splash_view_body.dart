@@ -33,6 +33,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       children: [
         SizedBox(
           width: double.infinity,
+          height: double.infinity,
           child: Image.asset(
             kSplashImage,
             fit: BoxFit.cover,
@@ -40,7 +41,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
         ),
         Positioned(
           bottom: MediaQuery.of(context).size.height * 0.05,
-          left: MediaQuery.of(context).size.width * 0.2,
+          left: MediaQuery.of(context).size.width * 0.15,
           child: SlidingAnimationButton(slidingAnimation: slidingAnimation),
         )
       ],

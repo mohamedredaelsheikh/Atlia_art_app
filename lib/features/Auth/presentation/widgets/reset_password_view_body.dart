@@ -1,4 +1,5 @@
 import 'package:atlia_art/core/utils/constants.dart';
+import 'package:atlia_art/core/utils/styles.dart';
 import 'package:atlia_art/core/widgets/custom_button.dart';
 import 'package:atlia_art/features/Auth/presentation/widgets/Custom_otp_list.dart';
 import 'package:flutter/material.dart';
@@ -19,23 +20,20 @@ class ResetPasswordBody extends StatelessWidget {
               kOtpImage,
               fit: BoxFit.cover,
             ),
-            const Opacity(
-              opacity: .75,
-              child: Text(
-                "Please enter 4 numbers code send to your email@gmail.com or phone number.",
-                style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w900,
-                    color: kPrimaryColor),
-                textAlign: TextAlign.center,
-              ),
+            Text(
+              "Please enter 4 numbers code send to your email@gmail.com or phone number.",
+              style: Styles.textStyle15.copyWith(
+                  color: kPrimaryColor,
+                  height: 1.5,
+                  fontWeight: FontWeight.w600),
+              textAlign: TextAlign.center,
             ),
             const SizedBox(
-              height: 10,
+              height: 48,
             ),
             const CustomOtpNumberList(),
             const SizedBox(
-              height: 15,
+              height: 22,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -46,29 +44,32 @@ class ResetPasswordBody extends StatelessWidget {
                     onPressed: () {},
                     backgroundcolor: kThairdColor,
                     text: "Resend Code",
-                    textcolor: kPrimaryColor,
-                    fontsize: 18,
-                    height: 50,
+                    style: Styles.textStyle15.copyWith(
+                      color: kPrimaryColor,
+                    ),
+                    height: 43,
                   ),
                 ),
               ],
             ),
             const SizedBox(
-              height: 10,
+              height: 22,
             ),
             CustomButton(
               onPressed: () {
                 GoRouter.of(context).push(kLoginView);
               },
               backgroundcolor: kPrimaryColor,
-              textcolor: kSacandaryColor,
               borderRadius: BorderRadius.circular(16),
               text: "Confirm",
-              fontsize: 20,
-              height: 50,
+              style: Styles.textStyle18.copyWith(
+                color: kSacandaryColor,
+                fontWeight: FontWeight.w600,
+              ),
+              height: 43,
             ),
             const SizedBox(
-              height: 30,
+              height: 48,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -79,10 +80,8 @@ class ResetPasswordBody extends StatelessWidget {
                   },
                   backgroundcolor: kThairdColor,
                   text: "Change email & phone number",
-                  style: const TextStyle(
-                    color: Color(0xff7638F9),
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
+                  style: Styles.textStyle15.copyWith(
+                    color: const Color(0xFF5500FF),
                     decoration: TextDecoration.underline,
                   ),
                   height: 50,

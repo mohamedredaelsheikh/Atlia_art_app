@@ -1,4 +1,5 @@
 import 'package:atlia_art/core/utils/constants.dart';
+import 'package:atlia_art/core/utils/styles.dart';
 import 'package:atlia_art/core/widgets/custom_button.dart';
 import 'package:atlia_art/features/Auth/presentation/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
@@ -17,16 +18,16 @@ class ForgetPasswordViewBody extends StatelessWidget {
           children: [
             Text(
               "Forget Password",
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 2,
-                foreground: Paint()
-                  ..style = PaintingStyle.stroke
-                  ..strokeWidth = 2
-                  ..color = kPrimaryColor,
+              style: Styles.textStyle25.copyWith(
+                fontWeight: FontWeight.w700,
+                color: kPrimaryColor,
+                height: 0.04,
+                letterSpacing: 1.25,
               ),
               textAlign: TextAlign.center,
+            ),
+            const SizedBox(
+              height: 25,
             ),
             ClipRRect(
               borderRadius: BorderRadius.circular(24),
@@ -35,33 +36,29 @@ class ForgetPasswordViewBody extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            const Opacity(
-              opacity: .85,
-              child: Text(
-                "Please enter your email address or phone number.",
-                style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w900,
-                    color: kPrimaryColor),
-                textAlign: TextAlign.center,
-              ),
+            const SizedBox(
+              height: 15,
             ),
-            Opacity(
-              opacity: .75,
-              child: Text(
-                "E-mail",
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w800,
-                    foreground: Paint()
-                      ..style = PaintingStyle.stroke
-                      ..strokeWidth = 1.5
-                      ..color = kPrimaryColor,
-                    letterSpacing: 1.5),
-                textAlign: TextAlign.start,
+            Text(
+              "Please enter your email address or phone number.",
+              style: Styles.textStyle18.copyWith(
+                height: 1.5,
+                fontWeight: FontWeight.w700,
+                color: kPrimaryColor,
               ),
+              textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 10),
+            const SizedBox(
+              height: 30,
+            ),
+            Text(
+              "E-mail",
+              style: Styles.textStyle18.copyWith(
+                color: kPrimaryColor,
+              ),
+              textAlign: TextAlign.start,
+            ),
+            const SizedBox(height: 25),
             CustomTextFormFiled(
               hintText: "E-mail or Phone number.",
               controller: TextEditingController(),
@@ -80,10 +77,11 @@ class ForgetPasswordViewBody extends StatelessWidget {
                 GoRouter.of(context).push(kResetPassword);
               },
               backgroundcolor: kPrimaryColor,
-              textcolor: kSacandaryColor,
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(15),
               text: "Send",
-              fontsize: 20,
+              style: Styles.textStyle18.copyWith(
+                color: kSacandaryColor,
+              ),
               height: 50,
             ),
           ],
